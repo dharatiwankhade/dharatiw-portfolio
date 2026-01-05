@@ -1,0 +1,15 @@
+footer{
+    background: $background-color;
+    color:white;
+min-height: 10vh;
+padding: 0% 5%;
+@include flex(flex-start,center,row);
+flex-wrap: wrap;
+ul{
+    @include flex(space-around,center,row);
+    flex : 1 1 40rem;
+}
+h4{
+    flex : 1 1 40rem;
+}
+}

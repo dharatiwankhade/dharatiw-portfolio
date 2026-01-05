@@ -1,0 +1,106 @@
+$header1:2.5rem;
+$header2:4rem;
+$header3:2.5rem;
+$header4:2rem;
+$text:2.5rem;
+$gradient:linear-gradient(#38d39f ,#38a4d3);
+$background-color:#154353;
+$gray-text:#2c2c2c;
+
+@mixin flex($justify, $align, $direction)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+
+}
+
+@import "global";
+@import "intro";
+@import "projects";
+@import "contact";
+@import "footer";
+
+@media screen and (max-width:1705px){
+    html{
+        font-size: 53%;
+    }
+
+    .splash{
+        // display: none;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:1560px){
+
+    html{
+        font-size: 50%;
+    }
+    .splash{
+        display: none;
+    }
+
+    svg{
+        width:80%;
+    }
+
+    
+    nav{
+        width: 100%;
+    }
+
+    .intro-images{
+    flex: 1 1 40rem;
+
+    .travelly, .elena{
+        flex : 1 1 50rem;
+    }
+}
+
+
+}
+
+@media screen and (max-width:1024px){
+    html{
+        font-size: 40%;
+    }
+
+    .intro-text, .intro-image{
+        flex: 1 1 100%;
+    }
+
+    .intro{
+        @include flex(center,center,column);
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:768px){
+    html{
+        font-size: 35%;
+    }
+
+    .intro{
+        @include flex(center,center,column);
+        text-align: center;
+    }
+
+    .intro-text, .intro-image{
+        flex: 1 1 100%;
+    }
+
+    h2{
+        font-size: 6rem;
+    }
+
+    h3{
+        font-size: 4rem;
+    }
+
+    form{
+        padding: 0rem;
+        width: 100%;
+    }
+}
